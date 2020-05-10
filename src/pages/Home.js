@@ -14,7 +14,26 @@ import RevSlider, { Slide, Caption } from 'react-rev-slider';
 
 
 
-class Home extends Component {   
+class Home extends Component { 
+constructor(props) {
+        super(props);
+         this.state={
+                responsive:{
+                    0: {
+                        items: 1,
+                    },
+                    450: {
+                        items: 2,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                   
+                },
+           
+        }
+        this.videostart=this.Videostart.bind(this);
+    }  
     componentDidMount() {
         console.log("component did mount");
         this.videostart();
