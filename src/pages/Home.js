@@ -15,7 +15,19 @@ import RevSlider, { Slide, Caption } from 'react-rev-slider';
 
 
 class Home extends Component {   
-    
+    componentDidMount() {
+        console.log("component did mount");
+        this.videostart();
+
+    }
+    Videostart() {
+        // setTimeout(function () {
+            //alert();
+            var Video = document.getElementById('video');
+            console.log(Video);
+            Video.autoplay = true;
+        // }, 4200);
+    }
     render() {
         // const config = {
         //     delay:9000,
